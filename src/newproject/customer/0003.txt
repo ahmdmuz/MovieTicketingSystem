@@ -1,0 +1,6 @@
+Customer name   : ahmad
+Customer ID     : 0003
+No  Movie title             Seat no             Price(RM)
+--  -----------             -------             ---------
+1   Candy Land              E2(twin seat)       45.00
+Total amount to be paid: RM245.00
