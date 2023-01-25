@@ -22,7 +22,7 @@ E1 <available>
 E2 <available>
 E3 <available>
 E4 <available>
-F1 <available>
+F1 0005
 F2 <available>
 F3 <available>
 F4 0001
