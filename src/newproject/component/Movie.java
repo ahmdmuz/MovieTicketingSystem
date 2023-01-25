@@ -11,12 +11,12 @@ public class Movie {
         int x = 0;
         for (int i=0;i<4;i++)
             for (int y=1;y<=5;y++){
-                ticket[x]= new Single(row[i],y,20.00, this);
+                ticket[x]= new SingleSeat(row[i],y,20.00, this);//composition
                 x++;
             }
         for (int i=4;i<6;i++)
             for (int z=1;z<=4;z++){
-                ticket[x]=new Twin(row[i], z, 45.00, this);
+                ticket[x]=new TwinSeat(row[i], z, 45.00, this);//composition
                 x++;
             }
         this.title = title;
@@ -26,6 +26,10 @@ public class Movie {
 
     public static int getMovieCount(){
         return movieCount;
+    }
+
+    public static void setMovieCount(int movieCount){
+        Movie.movieCount = movieCount;
     }
 
     public void setTicket(Ticket[] ticket){

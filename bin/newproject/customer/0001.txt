@@ -3,7 +3,7 @@ Customer ID     : 0001
 No  Movie title             Seat no             Price(RM)
 --  -----------             -------             ---------
 1   Shin Ultraman           A3(Single seat)     20.00
-2   Shin Ultraman           F4(twin seat)       45.00
-3   Pulau                   F4(twin seat)       45.00
-4   Last Resort             E3(twin seat)       45.00
+2   Shin Ultraman           F4(Twin seat)       45.00
+3   Last Resort             E3(Twin seat)       45.00
+4   Pulau                   F4(Twin seat)       45.00
 Total amount to be paid: RM155.00

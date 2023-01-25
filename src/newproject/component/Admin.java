@@ -2,7 +2,7 @@ package newproject.component;
 
 import java.util.*;
 
-public class Admin extends User{
+public class Admin extends User{//inheritance
     Scanner app = new Scanner(System.in);
 
     public Admin(String name, String id, String pass, String email){
@@ -58,6 +58,7 @@ public class Admin extends User{
                 return;
             }
             m.remove(i);
+            Movie.setMovieCount(Movie.getMovieCount()-1);
         }
         else System.out.println("No movie available!");
     }

@@ -119,9 +119,9 @@ public class MovieTicketingSystem{
                 s = file.next();
                 n = file.nextLine().trim();
                 if (n.equals("<available>"))
-                    ticket[y] = new Single(s.charAt(0),Integer.parseInt(s.substring(1)),20.00, m.get(i));
+                    ticket[y] = new SingleSeat(s.charAt(0),Integer.parseInt(s.substring(1)),20.00, m.get(i));
                 else {
-                    ticket[y] = new Single(s.charAt(0),Integer.parseInt(s.substring(1)),20.00, m.get(i));
+                    ticket[y] = new SingleSeat(s.charAt(0),Integer.parseInt(s.substring(1)),20.00, m.get(i));
                     for(int x=0;x<custSize;x++)
                         if(c.get(x).getId().equals(n)){
                             ticket[y].setCustomer(c.get(x));
@@ -133,9 +133,9 @@ public class MovieTicketingSystem{
                 s = file.next();
                 n = file.nextLine().trim();
                 if (n.equals("<available>"))
-                    ticket[y] = new Twin(s.charAt(0),Integer.parseInt(s.substring(1)),45.00, m.get(i));
+                    ticket[y] = new TwinSeat(s.charAt(0),Integer.parseInt(s.substring(1)),45.00, m.get(i));
                 else {
-                    ticket[y] = new Twin(s.charAt(0),Integer.parseInt(s.substring(1)),45.00, m.get(i));
+                    ticket[y] = new TwinSeat(s.charAt(0),Integer.parseInt(s.substring(1)),45.00, m.get(i));
                     for(int x=0;x<custSize;x++)
                         if(c.get(x).getId().equals(n)){
                             ticket[y].setCustomer(c.get(x));
@@ -485,7 +485,7 @@ public class MovieTicketingSystem{
                         Sale report for all Movies  
                     ----------------------------------
                     No of movie: %d
-                    """, Movie.getMovieCount()-1);
+                    """, Movie.getMovieCount());
             for(int i=0;i<movieSize;i++){
                 System.out.printf("""
 

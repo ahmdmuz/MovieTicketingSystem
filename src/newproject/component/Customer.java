@@ -2,7 +2,7 @@ package newproject.component;
 
 import java.util.ArrayList;
 
-public class Customer extends User{
+public class Customer extends User{//inheritance
     private String bDay;
     protected static int count;
     private ArrayList<Ticket> custTicket = new ArrayList<Ticket>();
