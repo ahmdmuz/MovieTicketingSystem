@@ -71,7 +71,8 @@ public class MovieTicketingSystem{
         }catch (FileNotFoundException e) {return;}
 
         while(file.hasNext()){
-            c.add(new Customer(file.next(),file.next(),file.next(),file.next(),file.next()));
+            String firstName = file.next();
+            c.add(new Customer((firstName+""+file.nextLine()),file.next(),file.next(),file.next(),file.next()));
         }
 
         file.close();
@@ -155,7 +156,7 @@ public class MovieTicketingSystem{
         try{
             out = new PrintWriter("newproject/Customer.txt");
             for (int i=0;i<custSize;i++)
-                out.printf("%-20s%-5s%-15s%-25s%-15s\n",c.get(i).getName(),c.get(i).getId(),c.get(i).getPass(),
+                out.printf("%s\n%-5s%-15s%-25s%-15s\n",c.get(i).getName(),c.get(i).getId(),c.get(i).getPass(),
                 c.get(i).getEmail(),c.get(i).getCustomerBirthDay());
             out.close();
         }catch(FileNotFoundException e){}

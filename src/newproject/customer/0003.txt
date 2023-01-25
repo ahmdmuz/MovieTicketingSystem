@@ -1,4 +1,4 @@
-Customer name   : ahmad
+Customer name   : ahmad  
 Customer ID     : 0003
 No  Movie title             Seat no             Price(RM)
 --  -----------             -------             ---------
