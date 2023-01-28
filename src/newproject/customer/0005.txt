@@ -1,6 +1,0 @@
-Customer name   : Ali Abu
-Customer ID     : 0005
-No  Movie title             Seat no             Price(RM)
---  -----------             -------             ---------
-1   Shin Ultraman           F1(Twin seat)       45.00
-Total amount to be paid: RM310.00
