@@ -1,4 +1,4 @@
-Customer name   : alia  
+Customer name   : alia
 Customer ID     : 0004
 No  Movie title             Seat no             Price(RM)
 --  -----------             -------             ---------
