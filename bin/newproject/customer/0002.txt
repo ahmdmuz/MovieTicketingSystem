@@ -1,0 +1,6 @@
+Customer name   : abu
+Customer ID     : 0002
+No  Movie title             Seat no             Price(RM)
+--  -----------             -------             ---------
+1   Last Resort             F2(Twin seat)       45.00
+Total amount to be paid: RM200.00

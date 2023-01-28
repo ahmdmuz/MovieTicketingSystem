@@ -1,0 +1,6 @@
+Customer name   : alia
+Customer ID     : 0004
+No  Movie title             Seat no             Price(RM)
+--  -----------             -------             ---------
+1   Pulau                   D3(Single seat)     20.00
+Total amount to be paid: RM265.00

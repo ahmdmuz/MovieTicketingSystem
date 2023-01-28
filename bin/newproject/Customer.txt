@@ -1,0 +1,10 @@
+ali
+0001 ali            f@yahoo.com              4/6/7          
+abu
+0002 abu            abu@yahoo                2/1/22         
+ahmad
+0003 ahmad          ahmad@hotmail            7/6/22         
+alia
+0004 alia           alia@google              6/5/09         
+Ali Abu
+0005 ali            aliabu@hotmail.com       5/4/66         
