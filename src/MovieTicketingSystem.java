@@ -9,7 +9,7 @@ interface Scan{
 }
 
 public class MovieTicketingSystem{
-    public static void main(String[] args) throws FileNotFoundException{
+    public static void main(String[] args){
         ArrayList<Movie> movie = new ArrayList<Movie>();            
         ArrayList<Customer> customer = new ArrayList<Customer>();   
         ArrayList<Admin> admin = new ArrayList<Admin>();            
