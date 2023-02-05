@@ -1,8 +1,8 @@
 import java.util.*;
 import java.io.*;
 
-import newproject.component.*;
-import newproject.component.Customer;
+import library.component.*;
+import library.component.Customer;
 
 interface Scan{
     Scanner app = new Scanner(System.in);
@@ -63,11 +63,11 @@ public class MovieTicketingSystem{
         exitSystem(customer, movie);
     }
 
-    private static void readFileCustomer(ArrayList<Customer> c){
+    private static void readFileCustomer(ArrayList<Customer> c){//FileNotFoundException
         Scanner file;
 
         try{
-        file = new Scanner(new File("newproject/Customer.txt"));
+        file = new Scanner(new File("library/inputOutput/Customer.txt"));
         }catch (FileNotFoundException e) {return;}
 
         while(file.hasNext()){
@@ -82,7 +82,7 @@ public class MovieTicketingSystem{
         Scanner file;
         
         try{
-        file = new Scanner(new File("newproject/Admin.txt"));
+        file = new Scanner(new File("library/inputOutput/Admin.txt"));
         }catch (FileNotFoundException e){return;}
 
         while(file.hasNext()){
@@ -96,7 +96,7 @@ public class MovieTicketingSystem{
         Scanner file;
 
         try{
-        file = new Scanner(new File("newproject/Movie.txt"));
+        file = new Scanner(new File("library/inputOutput/Movie.txt"));
         }catch (FileNotFoundException e) {return;}
 
         while(file.hasNext()){
@@ -113,7 +113,7 @@ public class MovieTicketingSystem{
         for(int i=0;i < movieSize;i++){
             Ticket[] ticket = new Ticket[28];
             try{
-            file = new Scanner(new File(String.format("newproject/%sTicket.txt", (m.get(i).getTitle()).replaceAll("\\s.*", ""))));
+            file = new Scanner(new File(String.format("library/inputOutput/%sTicket.txt", (m.get(i).getTitle()).replaceAll("\\s.*", ""))));
             }catch (FileNotFoundException e) {continue;}
             String s,n;
             for(int y=0;y<20;y++){
@@ -154,7 +154,7 @@ public class MovieTicketingSystem{
         PrintWriter out;
         int custSize=c.size();
         try{
-            out = new PrintWriter("newproject/Customer.txt");
+            out = new PrintWriter("library/inputOutput/Customer.txt");
             for (int i=0;i<custSize;i++)
                 out.printf("%s\n%-5s%-15s%-25s%-15s\n",c.get(i).getName(),c.get(i).getId(),c.get(i).getPass(),
                 c.get(i).getEmail(),c.get(i).getCustomerBirthDay());
@@ -164,7 +164,7 @@ public class MovieTicketingSystem{
         double totalPrice=0;
         for(int i=0;i<custSize;i++){
             try{
-                out = new PrintWriter(new FileWriter(String.format("newproject/customer/%s.txt", c.get(i).getId())));
+                out = new PrintWriter(new FileWriter(String.format("library/inputOutput/customerOutput/%s.txt", c.get(i).getId())));
                 out.printf("""
                     Customer name   : %s
                     Customer ID     : %s
@@ -190,7 +190,7 @@ public class MovieTicketingSystem{
 
     private static void writeFileMovie(ArrayList<Movie> m){
         try{
-        PrintWriter out = new PrintWriter("newproject/Movie.txt");
+        PrintWriter out = new PrintWriter("library/inputOutput/Movie.txt");
         for (int i=0;i<m.size();i++){
             out.printf("%s\n", m.get(i).getTitle());
             out.printf("%s\n", m.get(i).getSynopsis());
@@ -205,7 +205,7 @@ public class MovieTicketingSystem{
             Ticket[] ticket = new Ticket[28];
             ticket = m.get(i).getTicket();
             try{
-            out = new PrintWriter(String.format("newproject/%sTicket.txt", (m.get(i).getTitle()).replaceAll("\\s.*", "")));
+            out = new PrintWriter(String.format("library/inputOutput/%sTicket.txt", (m.get(i).getTitle()).replaceAll("\\s.*", "")));
             for(int y=0;y<28;y++){
                 if (ticket[y].getCustomer()==null)
                     out.printf("%s %s\n", ticket[y].getRow()+""+ticket[y].getColumn(), "<available>");
@@ -216,7 +216,7 @@ public class MovieTicketingSystem{
         }
     }
 
-    private static int choice(){
+    private static int choice(){//NumberFormatException
         int i;
         System.out.print("""
 

@@ -1,4 +1,4 @@
-package newproject.component;
+package library.component;
 
 import java.util.*;
 

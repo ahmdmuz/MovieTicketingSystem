@@ -1,4 +1,4 @@
-package newproject.component;
+package library.component;
 
 public abstract class Ticket {
     private final char row;

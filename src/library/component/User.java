@@ -1,4 +1,4 @@
-package newproject.component;
+package library.component;
 
 public class User {
     protected String name, id, pass, email;

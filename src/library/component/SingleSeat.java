@@ -1,4 +1,4 @@
-package newproject.component;
+package library.component;
 
 public class SingleSeat extends Ticket{//inheritance
     public SingleSeat(char row, int column, double price, Movie movie){

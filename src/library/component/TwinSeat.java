@@ -1,4 +1,4 @@
-package newproject.component;
+package library.component;
 
 public class TwinSeat extends Ticket{//inheritance
     public TwinSeat(char row, int column, double price, Movie movie){

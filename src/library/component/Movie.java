@@ -1,4 +1,4 @@
-package newproject.component;
+package library.component;
 
 public class Movie {
     private final char[] row = {'A','B','C','D','E','F'};
